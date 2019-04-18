@@ -185,7 +185,7 @@ ADDITIONAL_RESOURCE_GRAPH_LOCATIONS = (
 )
 
 SKOS_FILE_LOCATION = os.path.join(PACKAGE_ROOT,"source_data","concepts",
-    "EAMENA-northafrica-app-RDM.xml"
+    "EAMENA-egypt-app-RDM.xml"
 )
 
 CONCEPT_SCHEME_LOCATIONS = (
