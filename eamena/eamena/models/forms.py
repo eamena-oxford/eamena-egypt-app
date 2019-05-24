@@ -386,6 +386,7 @@ class ArchaeologicalAssessmentForm(ResourceForm):
         self.update_nodes('FEATURE_ASSIGNMENT.E13', data)
         self.update_nodes('FEATURE_MORPHOLOGY_TYPE.E55', data)
         self.update_nodes('FUNCTION_INTERPRETATION_INFERENCE_MAKING.I5', data)
+        self.update_nodes('SITE_FUNCTION_TYPE.I4', data)
         return
     
     
@@ -435,6 +436,13 @@ class ArchaeologicalAssessmentForm(ResourceForm):
                     'INTERPRETATION_NUMBER_TYPE.E55' : Concept().get_e55_domain('INTERPRETATION_NUMBER_TYPE.E55'),
                     'FUNCTION_TYPE.I4' : Concept().get_e55_domain('FUNCTION_TYPE.I4'),
                     'FUNCTION_CERTAINTY.I6' : Concept().get_e55_domain('FUNCTION_CERTAINTY.I6')
+                }
+            }
+            self.data['SITE_FUNCTION_TYPE.I4'] = {
+                'branch_lists': self.get_nodes('SITE_FUNCTION_TYPE.I4'),
+                'domains': {
+                    'SITE_FUNCTION_TYPE.I4' : Concept().get_e55_domain('SITE_FUNCTION_TYPE.I4'),
+                    'SITE_FUNCTION_CERTAINTY.I6' : Concept().get_e55_domain('SITE_FUNCTION_CERTAINTY.I6'),
                 }
             }
             
@@ -524,8 +532,16 @@ class ConditionAssessmentForm(ResourceForm):
                     'DISTURBANCE_CAUSE_CATEGORY_TYPE.E55' : Concept().get_e55_domain('DISTURBANCE_CAUSE_CATEGORY_TYPE.E55'),
                     'DISTURBANCE_CAUSE_TYPE.I4' : Concept().get_e55_domain('DISTURBANCE_CAUSE_TYPE.I4'),
                     'DISTURBANCE_CAUSE_CERTAINTY.I6' : Concept().get_e55_domain('DISTURBANCE_CAUSE_CERTAINTY.I6'),
-                    'EFFECT_TYPE.I4' : Concept().get_e55_domain('EFFECT_TYPE.I4'),
-                    'EFFECT_CERTAINTY.I6' : Concept().get_e55_domain('EFFECT_CERTAINTY.I6'),
+                    'EFFECT_TYPE_1.I4' : Concept().get_e55_domain('EFFECT_TYPE_1.I4'),
+                    'EFFECT_TYPE_2.I4' : Concept().get_e55_domain('EFFECT_TYPE_2.I4'),
+                    'EFFECT_TYPE_3.I4' : Concept().get_e55_domain('EFFECT_TYPE_3.I4'),
+                    'EFFECT_TYPE_4.I4' : Concept().get_e55_domain('EFFECT_TYPE_4.I4'),
+                    'EFFECT_TYPE_5.I4' : Concept().get_e55_domain('EFFECT_TYPE_5.I4'),
+                    'EFFECT_CERTAINTY_1.I6' : Concept().get_e55_domain('EFFECT_CERTAINTY_1.I6'),
+                    'EFFECT_CERTAINTY_2.I6' : Concept().get_e55_domain('EFFECT_CERTAINTY_2.I6'),
+                    'EFFECT_CERTAINTY_3.I6' : Concept().get_e55_domain('EFFECT_CERTAINTY_3.I6'),
+                    'EFFECT_CERTAINTY_4.I6' : Concept().get_e55_domain('EFFECT_CERTAINTY_4.I6'),
+                    'EFFECT_CERTAINTY_5.I6' : Concept().get_e55_domain('EFFECT_CERTAINTY_5.I6'),
                     'DAMAGE_TREND_TYPE.E55' : Concept().get_e55_domain('DAMAGE_TREND_TYPE.E55'),
                 }
             }
