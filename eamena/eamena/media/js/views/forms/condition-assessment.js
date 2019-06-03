@@ -49,8 +49,16 @@ define(['jquery',
                             'DISTURBANCE_DATE_TO.E61',
                             'DISTURBANCE_DATE_OCCURRED_BEFORE.E61',
                             'DISTURBANCE_DATE_OCCURRED_ON.E61',
-                            'EFFECT_TYPE.I4',
-                            'EFFECT_CERTAINTY.I6',
+                            'EFFECT_TYPE_1.I4',
+                            'EFFECT_CERTAINTY_1.I6',
+                            'EFFECT_TYPE_2.I4',
+                            'EFFECT_CERTAINTY_2.I6',
+                            'EFFECT_TYPE_3.I4',
+                            'EFFECT_CERTAINTY_3.I6',
+                            'EFFECT_TYPE_4.I4',
+                            'EFFECT_CERTAINTY_4.I6',
+                            'EFFECT_TYPE_5.I4',
+                            'EFFECT_CERTAINTY_5.I6',
                         ];
                         var mustHaveOneOf = [
                             'DISTURBANCE_DATE_FROM.E61',
@@ -69,6 +77,15 @@ define(['jquery',
                         var ck4 = vt.isValidDate(nodes,'DISTURBANCE_DATE_OCCURRED_ON.E61');
                         var ck5 = vt.mustHaveAtLeastOneOf(nodes, mustHaveOneOf);
                         var ck6 = vt.ifOneThenAll(nodes, datePair);
+                        console.log(ck0)
+                        console.log(ck1)
+                        console.log(ck2)
+                        console.log(ck3)
+                        console.log(ck4)
+                        console.log(ck5)
+                        console.log(ck6)
+                        console.log(nodes)
+                        console.log(this.data)
                         return ck0 && ck1 && ck2 && ck3 && ck4 && ck5 && ck6;
                     }
                 }));
